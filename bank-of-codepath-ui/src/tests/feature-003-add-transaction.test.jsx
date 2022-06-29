@@ -4,7 +4,6 @@ import { MockStateContext } from "instant-noodles"
 import { configureSpecSuiteWithUtils, buildProxy, createAddTransactionProps, sleep } from "./utils"
 import Home from "../components/Home/Home"
 import AddTransaction from "../components/AddTransaction/AddTransaction"
-import { AddTransactionForm } from "../components/AddTransaction/AddTransaction"
 
 export function testAddTransaction(App) {
   const {
@@ -25,7 +24,7 @@ export function testAddTransaction(App) {
 
     const testInstances = ctx.getTestInstancesForRoot({
       RootComponent: App,
-      singleComponentNames: ["AddTransaction", "AddTransactionForm", "BankActivity", "FilterInput", "Home", "Navbar"],
+      singleComponentNames: ["AddTransaction", "BankActivity", "FilterInput", "Home", "Navbar"],
     })
     ctx.testInstances = testInstances
   })
